@@ -9,8 +9,6 @@ public class Hangman {
         System.out.println("Please guess a letter....");
         char guessedLetter = scanner.next().charAt(0);
 
-        Game.getRandomWord();
-
 
     }
 }

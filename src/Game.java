@@ -12,8 +12,8 @@ public class Game {
         int randomIndex = random.nextInt(words.size());
 
         return words.get(randomIndex);
-
     }
+
 
     private String wordToFind;
 
