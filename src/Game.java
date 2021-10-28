@@ -5,17 +5,31 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Game {
+public class Game extends FileReader{
+    static Random random = new Random();
 
-    public static String getRandomWord(ArrayList<String> words) {
-        Random random = new Random();
-        int randomIndex = random.nextInt(words.size());
+    //Get a random word
+    public static void getRandomWord() {
 
-        return words.get(randomIndex);
+        //Call method getAllWords
+        getAllWords();
+
+        //Use getAllWords to get the size
+        int randomWord = random.nextInt(getAllWords().size());
+
     }
 
+    public void showRandomWord(){
 
-    private String wordToFind;
 
-    private char[] wordFound;
+
+    }
+
+    //See if the players guess is in the word
+    public static void printGuessedLetter(){
+
+        for (int i = 0; i < getRandomWord; i++) {
+
+        }
+    }
 }

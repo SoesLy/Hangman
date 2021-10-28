@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileReader {
-    ArrayList<WordsList> allWords = new ArrayList<WordsList>();
 
-    public static String accessWords() {
+    public static ArrayList<String> storedWords = new ArrayList<String>();
+
+    //A method that adds my file to the arrayList
+    private static void accessWords() {
 
         File words = new File("resources/cs words.csv");
 
@@ -14,16 +16,18 @@ public class FileReader {
         {
             try {
                 scanner = new Scanner(words);
-                while (scanner.hasNextLine()) {
-                    System.out.println(scanner.nextLine());
+                while (scanner.hasNext()) {
+                    storedWords.add(scanner.next());
                 }
             } catch (FileNotFoundException e) {
                 System.out.println("File not found");
                 e.printStackTrace();
             }
-
-            return "";
-
         }
+    }
+    //Method to call my arrayList
+    public static ArrayList<String> getAllWords() {
+        accessWords();
+        return storedWords;
     }
 }
