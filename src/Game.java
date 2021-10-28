@@ -7,14 +7,33 @@ import java.util.Random;
 
 public class Game extends FileReader{
 
-    public static void showRandomWord(){
-        getRandomWord();
+    //Creating a new ArrayList for players guessed letters
+    static ArrayList<Character> playersGuesses = new ArrayList<>();
+    static Random random = new Random();
 
+    //Get a random word
+    public static String getRandomWord() {
+
+        //Use storedWords from FileReader to get random word from ArrayList
+        String randomWord = storedWords.get(random.nextInt(storedWords.size()));
+
+        return randomWord;
     }
 
-    //See if the players guess is in the word
-    //public static void printGuessedLetter(){
+    //Change random word to lines
+    public static String getWordInUnderscoresStatus(){
+        String status = "";
+        for (int i = 0; i < randomWord().length(); i++) {
+            status = status + "_" ;
+        }
+        return status;
+            //If the letter is in the random word, replace letter for _
 
-        //for (int i = 0; i < storedWords.size(); i++) {
+            }
+
+
+    public static void hangman() {
+
+    }
 
 }
