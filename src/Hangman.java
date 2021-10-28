@@ -12,17 +12,8 @@ public class Hangman {
         char guessedLetter = scanner.next().charAt(0);
 
          */
-        /*FileReader f = new FileReader();
-        ArrayList storedWords = f.getAllWords();
-
-        for (int i = 0; i < storedWords.size(); i++) {
-            System.out.println(storedWords.get(i));
-
-
-        }
-
-         */
-        System.out.println();
+        FileReader.getRandomWord();
+        String chosenWord = FileReader.getRandomWord();
 
     }
 }
