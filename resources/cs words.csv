@@ -1,12 +1,7 @@
-loop
-inheritance
 interface
 string
-integer
 method
-scanner
 random
 input
 print
-mudulus
 bracket
